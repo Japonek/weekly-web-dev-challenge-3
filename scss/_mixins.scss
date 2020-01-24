@@ -1,0 +1,12 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+@mixin transition {
+  transition: 0.2s ease-in-out;
+}
