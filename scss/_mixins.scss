@@ -7,6 +7,10 @@
   display: flex;
   flex-direction: column;
 }
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
 @mixin transition {
   transition: 0.2s ease-in-out;
 }

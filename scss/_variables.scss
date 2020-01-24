@@ -18,5 +18,8 @@ $font-weights: (
   'regular': 400,
   'bold': 700,
 );
-
-$mobile: 800px;
+/*---Media queries---*/
+$mobile-sm: 576px;
+$mobile-md: 768px;
+$mobile-l: 992px;
+$mobile-xl: 1200px;
