@@ -2,7 +2,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  list-style: none;
+  z-index: 5; }
 
 a {
   text-decoration: none;
@@ -28,8 +30,7 @@ nav {
           box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.75);
   margin-top: 7rem; }
   .home h4 {
-    margin: 2.5rem 0 3.5rem 0;
-    font-size: 1.2rem; }
+    margin: 2.5rem 0 3.5rem 0; }
 
 .btn {
   padding: 1.5rem 2rem;
@@ -48,7 +49,84 @@ nav {
   text-transform: uppercase;
   border-radius: 5px; }
 
-body {
+.about {
+  text-align: left; }
+
+.about p {
+  color: #cccccc;
+  margin: 2.5rem 0 2rem -1rem; }
+
+.about ul li {
+  color: #cccccc;
+  position: relative;
+  margin: 1rem 3rem; }
+
+.about ul li::before {
+  position: absolute;
+  top: -0.4rem;
+  left: -3rem;
+  content: '';
+  display: table;
+  background-image: url(/dist/img/Checkmark-1.png);
+  background-size: cover;
+  width: 2rem;
+  height: 2rem; }
+
+.about .btn {
+  margin-top: 4rem; }
+
+.about .container {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.about .inner-container {
+  padding: 100px; }
+
+.about h2 {
+  color: #ffffff; }
+
+.BG-gear {
+  background-color: #e9e9e9;
+  min-width: 30%;
+  position: relative;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch; }
+  .BG-gear img {
+    position: absolute;
+    top: 100px;
+    right: -195px; }
+
+.BG-about {
+  min-width: 70%;
+  background-image: url(/dist/img/BG-about.png);
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.75); }
+
+.projects .inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.BG-projects {
+  background-image: url(/dist/img/BG-mobile.png);
+  position: relative;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch; }
+
+html {
   color: #777777;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -61,12 +139,16 @@ body {
 .text-secondary-color {
   color: #ffffff; }
 
+.green {
+  color: #7cc576; }
+
 h4 {
   font-family: "Roboto Slab", serif;
   color: #cccccc;
   font-size: 1.3rem;
   margin-top: 1.2rem;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  letter-spacing: -0.5px; }
 
 h1 {
   font-size: 4rem;
@@ -77,6 +159,7 @@ h2 {
   color: #222222; }
 
 p {
+  font-family: "Roboto Slab", serif;
   padding: 0 1rem; }
 
 .container {
@@ -94,6 +177,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   max-width: 960px;
   margin: 0 auto; }
 
@@ -117,19 +201,9 @@ h5 {
   margin-bottom: 1.2rem;
   margin-top: 2.5rem; }
 
-.BG-gear {
-  background-color: #e9e9e9;
-  width: 30%;
-  position: relative; }
-  .BG-gear img {
-    margin: 100px 0;
-    position: absolute;
-    right: -195px; }
-
-.BG-about {
-  width: 70%;
-  background-image: url(/dist/img/BG-about.png);
-  background-size: cover; }
+h6 {
+  color: #222222;
+  font-size: 1.2rem; }
 
 .project-row {
   display: -ms-grid;
@@ -176,6 +250,10 @@ body {
 }
 */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 3rem; } }
+  html {
+    font-size: 14px; }
+  .BG-gear {
+    display: none; }
+  .BG-about .inner-container {
+    margin: 0 auto; } }
 /*# sourceMappingURL=main.css.map */

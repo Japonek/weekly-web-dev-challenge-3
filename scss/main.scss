@@ -4,8 +4,9 @@
 @import './header';
 @import './home';
 @import './buttons';
-
-body {
+@import './about';
+@import './projects';
+html {
   color: $text-color;
   font-family: $text-font;
   font-size: $font-size;
@@ -18,13 +19,16 @@ body {
 .text-secondary-color {
   color: $text-secondary-color;
 }
-
+.green {
+  color: $bg-green;
+}
 h4 {
   font-family: $text-secondary-font;
   color: $text-third-color;
   font-size: 1.3rem;
   margin-top: 1.2rem;
   margin-bottom: 5rem;
+  letter-spacing: -0.5px;
 }
 h1 {
   font-size: 4rem;
@@ -35,11 +39,13 @@ h2 {
   color: $text-h-color;
 }
 p {
+  font-family: $text-secondary-font;
   padding: 0 1rem;
 }
 .container {
   @include flexCenter;
   @include flexColumn;
+  position: relative;
   max-width: 960px;
   margin: 0 auto;
 }
@@ -61,20 +67,9 @@ h5 {
   margin-bottom: 1.2rem;
   margin-top: 2.5rem;
 }
-.BG-gear {
-  background-color: $bg-gear;
-  width: 30%;
-  position: relative;
-  img {
-    margin: 100px 0;
-    position: absolute;
-    right: -195px;
-  }
-}
-.BG-about {
-  width: 70%;
-  background-image: url(/dist/img/BG-about.png);
-  background-size: cover;
+h6 {
+  color: $text-h-color;
+  font-size: 1.2rem;
 }
 
 .project-row {
@@ -116,8 +111,14 @@ body {
 }
 */
 @media (max-width: $mobile-md) {
-  h1 {
-    font-size: 3rem;
+  html {
+    font-size: $font-size-mobile;
+  }
+  .BG-gear {
+    display: none;
+  }
+  .BG-about .inner-container {
+    margin: 0 auto;
   }
 }
 @media (max-width: $mobile-l) {
