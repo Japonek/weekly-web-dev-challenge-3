@@ -6,6 +6,11 @@
 @import './buttons';
 @import './about';
 @import './projects';
+@import './culture';
+@import './clients';
+@import './contact';
+@import './media';
+@import './latest';
 html {
   color: $text-color;
   font-family: $text-font;
@@ -21,6 +26,12 @@ html {
 }
 .green {
   color: $bg-green;
+}
+.bg-green {
+  background-color: $bg-green;
+}
+.bold {
+  font-weight: weight(bold);
 }
 h4 {
   font-family: $text-secondary-font;
@@ -40,7 +51,6 @@ h2 {
 }
 p {
   font-family: $text-secondary-font;
-  padding: 0 1rem;
 }
 .container {
   @include flexCenter;
@@ -50,9 +60,12 @@ p {
   margin: 0 auto;
 }
 .inner-container {
-  padding: 100px 0;
+  padding: 6.25rem 0;
 }
-
+blockquote {
+  font-family: $text-secondary-font;
+  font-size: 1.4rem;
+}
 .row-3cols {
   display: grid;
   justify-content: center;
@@ -110,6 +123,15 @@ body {
   flex-direction: column;
 }
 */
+@media (max-width: $mobile-sm) {
+  .clients-portrait {
+    display: none;
+  }
+  .clients-quote {
+    width: 100%;
+    margin: 2rem auto;
+  }
+}
 @media (max-width: $mobile-md) {
   html {
     font-size: $font-size-mobile;
@@ -122,4 +144,9 @@ body {
   }
 }
 @media (max-width: $mobile-l) {
+  .culture {
+    .line-wrapper::after {
+      display: none;
+    }
+  }
 }

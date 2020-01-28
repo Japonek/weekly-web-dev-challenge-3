@@ -1,0 +1,16 @@
+.culture {
+  background-color: $bg-light-grey;
+  .line-wrapper {
+    position: relative;
+  }
+  .line-wrapper::after {
+    position: absolute;
+    top: 50%;
+    right: -37.5%;
+    content: '';
+    display: table;
+    width: 10rem;
+    height: 2px;
+    background-color: $text-color;
+  }
+}

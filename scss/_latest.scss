@@ -1,0 +1,9 @@
+.latest {
+  background-color: $text-h-color;
+  color: $text-secondary-color;
+  text-align: left;
+
+  .inner-container {
+    padding: 3rem 0;
+  }
+}

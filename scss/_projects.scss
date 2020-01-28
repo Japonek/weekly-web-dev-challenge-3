@@ -1,8 +1,33 @@
 .projects .inner-container {
   @include flexColumn;
 }
+.projects-content {
+  width: 50%;
+  text-align: left;
+  h6:first-child {
+    padding-bottom: 1.5rem;
+  }
+  ul li {
+    position: relative;
+  }
+  ul li:first-child::before {
+    content: '';
+    display: inline-block;
+    background-image: url(/dist/img/Icon-Basket.png);
+    background-size: cover;
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+.projects-row {
+  @include flexRow;
+}
 .BG-projects {
+  width: 50%;
   background-image: url(/dist/img/BG-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   @include flexFillHeight;
 }

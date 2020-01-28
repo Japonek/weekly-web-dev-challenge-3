@@ -1,0 +1,19 @@
+.clients {
+  .clients-container {
+    @include flexRow;
+    align-items: center;
+    .clients-portrait {
+      width: 13rem;
+      background-color: $bg-light-grey;
+      height: 13rem;
+      border-radius: 50%;
+    }
+    .clients-quote {
+      width: 80%;
+      p {
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
